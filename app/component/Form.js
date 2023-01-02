@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Modal from "./Modal";
  export default function Form (){
     const [loationinput, setloationinput] = useState("");
     const [mininput, setMinInput] = useState(0);
