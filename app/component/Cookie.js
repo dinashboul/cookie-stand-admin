@@ -19,7 +19,7 @@ const onSubmitHandler = (e) => {
 }
 
 return(
-<div class="container my-24 px-6 mx-auto">
+<div class="container bg-gray-100 px-6 mx-auto">
 
 <section class="mb-32 text-gray-800">
   <div
