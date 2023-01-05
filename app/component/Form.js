@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import ReportTable from './ReportTable'
+
  export default function Form (){
     const [loationinput, setloationinput] = useState("");
     const [mininput, setMinInput] = useState(0);
@@ -215,6 +217,7 @@ import { useState } from "react";
                     )
                 })}
             </section>
+            
             
             </>
     )
