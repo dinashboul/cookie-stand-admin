@@ -51,8 +51,8 @@ import ReportTable from './ReportTable'
     }
     return (
         <>
-        <div class="bg-gray-100 flex justify-center items-center">
-        <div class="w-2/3 flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class=" dark:bg-black bg-gray-100 flex justify-center items-center">
+        <div class=" w-2/3 flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="bg-gray-200 text-gray-700 text-lg px-6 py-4">Create Cookie Stand</div>
     
         <div class="flex justify-between items-center px-6 py-4">

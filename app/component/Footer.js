@@ -1,7 +1,7 @@
 import React from "react"
 export default function Footer(){
 return(
-    <footer class="text-center text-gray-800 mt-auto" style={{backgroundcolor:" #f1f1f1"}} >
+    <footer class=" dark:bg-black text-center text-gray-800 mt-auto" style={{backgroundcolor:" #f1f1f1"}} >
         <div class="container pt-9">
     <div class="flex justify-center mb-9">
       <a href="#!" class="mr-9 text-gray-800">
@@ -108,9 +108,8 @@ return(
       </a>
     </div>
   </div>
-  <div class="text-center text-black-700 p-4"  >
-    © 2021 Copyright:
-    <a class="text-black" href="https://tailwind-elements.com/">Tailwind Elements</a>
+  <div class=" dark:text-white text-center text-black-700 p-4"  >
+    © 2021 Copyright
   </div>
 </footer>
 )
