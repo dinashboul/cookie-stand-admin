@@ -1,15 +1,18 @@
+'use client';
 import Footer from './component/Footer'
 import './globals.css'
 import Header from './component/Header'
+import ThemeWrapper from './contexts/Theme'
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <ThemeWrapper>
+      <body >
         <Header />
         <main>
         {children}
@@ -17,6 +20,8 @@ export default function RootLayout({ children }) {
         <Footer />
 
         </body>
+        </ThemeWrapper>
+        
     </html>
   )
 }

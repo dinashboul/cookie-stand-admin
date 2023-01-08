@@ -19,9 +19,10 @@ const onSubmitHandler = (e) => {
 }
 
 return(
-<div class="container bg-gray-100 px-6 mx-auto">
+<div class="dark:bg-black container bg-gray-100 px-6 mx-auto">
 
-<section class="mb-32 text-gray-800">
+
+<section  class=" mb-32 text-gray-800">
   <div
     class="relative overflow-hidden bg-no-repeat bg-cover"
     style={{
@@ -37,11 +38,11 @@ return(
         backdropfilter: "blur(30px)"
       }}
     >
-      <div class="flex flex-wrap justify-center text-center lg:text-left">
+      <div class=" flex flex-wrap justify-center text-center lg:text-left">
         <div class="grow-0 shrink-0 basis-auto w-full xl:w-10/12 px-6">
           <div class="grid lg:grid-cols-2 gap-x-6 items-center">
             <div class="mb-10 lg:mb-0">
-              <h2 class="text-3xl font-bold">
+              <h2 class=" dark:text-white text-3xl font-bold">
                 Welcome to our App.
                 <br />
                 <span class="text-blue-600">Please Enter Your Name and Follow The Instructions</span>
