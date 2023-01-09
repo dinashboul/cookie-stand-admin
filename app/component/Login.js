@@ -1,11 +1,11 @@
 import { useState } from "react"
+import { useEffect } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/auth";
 export default function Login (){
     const [userName,setUserName]=useState('');
     const [password,setPassword]=useState('');
     const {login} = useContext(AuthContext);
-    
     function userNameHandler(e){
         setUserName(e.target.value)
      }
@@ -24,6 +24,7 @@ export default function Login (){
             userName:userName,
             password:password
         }) 
+
     }
 
 return (
