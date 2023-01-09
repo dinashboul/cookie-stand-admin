@@ -205,7 +205,7 @@ import ReportTable from './ReportTable'
         </div>
       </div>
       
-      <section className="w-full pt-10 text-center shadow-lg shadow-black-50">
+      <section className="w-full pt-10 text-center dark:text-white shadow-lg shadow-black-50">
                 {fullReplyState.length > 0 && fullReplyState.map((item,index)=>{
                     return(
                         <div>

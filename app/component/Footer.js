@@ -2,7 +2,7 @@ import React from "react"
 export default function Footer(){
 return(
     <footer class=" dark:bg-black text-center text-gray-800 mt-auto" style={{backgroundcolor:" #f1f1f1"}} >
-        <div class="container pt-9">
+    <div class="flex flex-col min-h-screen container pt-9">
     <div class="flex justify-center mb-9">
       <a href="#!" class="mr-9 text-gray-800">
         <svg
@@ -107,10 +107,11 @@ return(
         </svg>
       </a>
     </div>
-  </div>
-  <div class=" dark:text-white text-center text-black-700 p-4"  >
+    <div class=" dark:text-white text-center text-black-700 p-4"  >
     © 2021 Copyright
   </div>
+  </div>
+  
 </footer>
 )
 
