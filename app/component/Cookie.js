@@ -21,7 +21,6 @@ const onSubmitHandler = (e) => {
 return(
 <div class="dark:bg-black container bg-gray-100 px-6 mx-auto">
 
-
 <section  class=" mb-32 text-gray-800">
   <div
     class="relative overflow-hidden bg-no-repeat bg-cover"
