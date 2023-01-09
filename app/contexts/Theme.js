@@ -11,15 +11,27 @@ export const ThemeContext = createContext();
 export default function ThemeWrapper ({children}){
 
     const [isDarkTheme, setIsDarkTheme] = useState(true);
+    const [pres, setPres] = useState([]);
+    const store = JSON.parse(localStorage.getItem('theme'));
+
+    
 
     function initialThemeHandle(){
-        // take the initial value
-        isDarkTheme && document.querySelector("body").classList.add("dark"); // add dark class to the body element
-    }
+         if (store==false){
+            setIsDarkTheme(store)
+            document.querySelector("body").classList.toggle("dark"); // add dark class to the body element
+
+         }
+         else
+            {        
+                isDarkTheme && document.querySelector("body").classList.add("dark"); // add dark class to the body element
+        }    }
     
     function toggleThemeHandler() {
         setIsDarkTheme(!isDarkTheme);
         document.querySelector("body").classList.toggle("dark"); // add dark class to the body element
+        localStorage.setItem('theme', JSON.stringify(!isDarkTheme));
+
     }
     
     const globalState = {
@@ -27,8 +39,15 @@ export default function ThemeWrapper ({children}){
         toggleThemeHandler
     }
 
-    useEffect(()=>initialThemeHandle());
+    useEffect(() => {
+        if (store){
+            setPres(store)
+        }
+        initialThemeHandle()
+      }, [store]);
+      
 
+    useEffect(()=>initialThemeHandle());
     return(
         <ThemeContext.Provider value={globalState}>
             {children}
