@@ -1,29 +1,28 @@
-import { useState } from "react"
-import { useEffect } from "react";
-import { useContext } from "react";
-import { AuthContext } from "../contexts/auth";
-export default function Login (){
-    const [userName,setUserName]=useState('');
-    const [password,setPassword]=useState('');
-    const {login} = useContext(AuthContext);
-    function userNameHandler(e){
-        setUserName(e.target.value)
-     }
-    
-     function passwordHandler(e){
-        setPassword(e.target.value)
-        
+import {useState, useContext} from 'react';
+import {AuthContext} from '../contexts/auth'
 
+
+export default function LoginForm() {
+
+    const [username, SetUsername] = useState('');
+    const [password, SetPassword] = useState('');
+    const {login} = useContext(AuthContext);
+    
+    function usernameChangeHandler(e) {
+        SetUsername(e.target.value);
+    }
+    
+    function passwordChangeHandler(e){
+        SetPassword(e.target.value);
     }
 
     function submitHandler(e){
         e.preventDefault();
-
-        // console.log(userName,password);  
-        login ({
-            userName:userName,
-            password:password
-        }) 
+        
+        login({
+            username,
+            password
+        });
 
     }
 
@@ -34,11 +33,11 @@ return (
                 <form action="" class="mt-6" onSubmit={submitHandler}>
                     <div class="my-5 text-sm">
                         <label for="username" class="block text-black">Username</label>
-                        <input type="text" onChange={userNameHandler} autofocus id="username" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Username" />
+                        <input type="text" onChange={usernameChangeHandler} autofocus id="username" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Username" />
                     </div>
                     <div class="my-5 text-sm">
                         <label for="password" class="block text-black">Password</label>
-                        <input type="password" onChange={passwordHandler} id="password" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Password" />
+                        <input type="password" onChange={passwordChangeHandler} id="password" class="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full" placeholder="Password" />
                         <div class="flex justify-end mt-2 text-xs text-gray-600">
                            <a href="../../pages/auth/forget_password.html hover:text-black">Forget Password?</a>
                         </div>
