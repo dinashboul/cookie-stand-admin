@@ -1,8 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import ReportTable from './ReportTable'
+import { useContext } from "react";
+import { AuthContext } from "../contexts/auth";
+import axios from "axios";
+import  useSWR  from "swr";
+
+
 
  export default function Form (){
+  
     const [loationinput, setloationinput] = useState("");
     const [mininput, setMinInput] = useState(0);
     const [maxinput, setMaxInput] = useState(0);
